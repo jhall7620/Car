@@ -13,10 +13,11 @@ const carSchema = new mongoose.Schema({
     Color: {
         type: String
     },
-    VIN: {
-        type: Number
-    },
     Mileage: {
         type: Number
+    },
+    Image: {
+        type: String,
+        default: 'https://www.kimballstock.com/images/car-stock-photos/cutout-car-images.jpg'
     }
 })

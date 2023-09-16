@@ -22,8 +22,8 @@ mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopolo
     .catch(err => console.error(err))
 
 // 404 page
-app.get('*', (req, res) => {
-    res.send(404)
+app.get('/', (req, res) => {
+    res.send('hello world')
 })
 
 // Listen
