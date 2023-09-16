@@ -18,7 +18,5 @@ const carSchema = new mongoose.Schema({
     },
     Mileage: {
         type: Number
-    },
-
-
+    }
 })
