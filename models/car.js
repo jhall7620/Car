@@ -10,14 +10,16 @@ const carSchema = new mongoose.Schema({
     year: {
         type: Number
     },
-    Color: {
+    color: {
         type: String
     },
-    Mileage: {
+    mileage: {
         type: Number
     },
-    Image: {
+    image: {
         type: String,
         default: 'https://www.kimballstock.com/images/car-stock-photos/cutout-car-images.jpg'
     }
 })
+
+module.exports = mongoose.model('Car', carSchema)

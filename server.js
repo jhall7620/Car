@@ -2,6 +2,7 @@
 const express = require('express')
 const methodOverride = require('method-override')
 const mongoose = require('mongoose')
+const carController = require('./controllers/car')
 
 // Configuration
 require('dotenv').config()
@@ -16,6 +17,9 @@ app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 
+// routes
+app.use('/cars', carController)
+
 // db connection
 mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => console.log('DB connected'))
@@ -23,7 +27,7 @@ mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopolo
 
 // 404 page
 app.get('/', (req, res) => {
-    res.send('hello world')
+    res.send('Error 404: Not Found')
 })
 
 // Listen
