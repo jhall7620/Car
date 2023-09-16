@@ -1,4 +1,5 @@
 const React = require('react')
+const Nav = require('nav')
 
 function Default(html) {
   return (
@@ -12,6 +13,7 @@ function Default(html) {
         <header>
           <h1><a href="/breads">Car</a></h1>
         </header>
+        <Nav></Nav>
         <div className="container">
           {html.children}
         </div>
